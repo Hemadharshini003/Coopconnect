@@ -12,9 +12,7 @@ from app.db.models import *
 
 config = context.config
 
-if config.config_file_name:
-    fileConfig(config.config_file_name)
-
+# Logging configuration disabled for deployment
 target_metadata = Base.metadata
 
 def run_migrations_offline() -> None:

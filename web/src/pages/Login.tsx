@@ -2,7 +2,7 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { LogIn, Key, Mail, ShieldAlert, Monitor, Sparkles } from 'lucide-react';
-
+import { API_BASE } from '../services/api';
 export const Login: React.FC = () => {
   const [email, setEmail] = useState('hqadmin@ncct.gov.in');
   const [password, setPassword] = useState('ChangeMe123!');
@@ -22,7 +22,7 @@ export const Login: React.FC = () => {
       formData.append('username', email);
       formData.append('password', password);
 
-      const res = await fetch('/api/v1/auth/login', {
+      const res = await fetch(`${API_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData,
@@ -57,7 +57,7 @@ export const Login: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-slate-900 to-indigo-950 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl overflow-hidden border border-emerald-500/20">
-        
+
         {/* Header */}
         <div className="bg-slate-950 p-6 text-center text-white relative border-b border-emerald-500/30">
           <div className="w-16 h-16 bg-amber-400 text-slate-950 rounded-2xl border border-amber-300 flex items-center justify-center mx-auto mb-3 shadow-lg font-black text-2xl">
