@@ -1,5 +1,6 @@
 export const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || '/api/v1';
+  import.meta.env.VITE_API_BASE_URL ||
+  'https://coopconnect-76n7.onrender.com/api/v1';
 
 export const getAuthToken = (): string | null => {
   return localStorage.getItem('coopconnect_access_token');
