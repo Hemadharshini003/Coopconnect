@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+.btn-primary {
+  @apply bg-coop-dark hover:bg-emerald-900 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-coop-dark focus:ring-offset-2 disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium px-4 py-2 rounded-lg transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-coop-dark focus:ring-offset-2;
+}
+
+.btn-accent {
+  @apply bg-coop-accent hover:bg-amber-600 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-coop-accent focus:ring-offset-2;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+}
+
+.badge-active {
+  @apply bg-emerald-100 text-emerald-800;
+}
+
+.badge-pending {
+  @apply bg-amber-100 text-amber-800;
+}
+
+.badge-offline {
+  @apply bg-slate-100 text-slate-800;
+}
+
+.badge-danger {
+  @apply bg-rose-100 text-rose-800;
+}
